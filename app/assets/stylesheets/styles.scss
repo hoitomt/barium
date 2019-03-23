@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Lato|Raleway');
+
 $navy-blue: #002245;
 $yellow: #ffdb2f;
 $gray: #cccccc;
 $light-gray: #e4e4e4e4;
+$slate-gray: #63768a;
 
 body {
-
+  font-family: 'Lato', sans-serif;
+  // font-family: 'Raleway', sans-serif;
 }
 
 nav {
@@ -16,23 +20,44 @@ nav {
   }
 }
 
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.player-name-links {
+  background-color: $navy-blue;
+  a {
+    // color: #fff;
+  }
+  .player-name {
+    margin-left: 10px;
+  }
+  .btn-barium {
+    color: $yellow;
+    background-color: $navy-blue;
+    border-color: $yellow;
+    &:hover {
+      color: $navy-blue;
+      background-color: $yellow;
+      border-color: $gray;
+    }
+  }
+}
+
 .barium {
   background-color: $navy-blue;
   color: #fff;
 }
 
 .barium-by-deforge-script {
-  background-image: image-url('barium_by_anna_deforge_30_trans.png');
-  background-repeat: no-repeat;
-  background-position: right 5px;
-  padding: 10px;
+  color: $slate-gray;
+  font-size: 40px;
 }
 
 .barium-bg {
   background-image: image-url('barium_bg.png');
   background-repeat: no-repeat;
   background-position: center center;
-  // height: 250px;
 }
 
 .home-page-image {
