@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Non-Core
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'simple_form'
 
 gem 'team_manager', path: '../../team_manager'
 
