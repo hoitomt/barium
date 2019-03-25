@@ -20,15 +20,29 @@ nav {
   }
 }
 
+.breadcrumbs {
+  padding: 5px 0;
+}
+
+.notification {
+  color: #fff;
+
+  .notice {
+    padding: .5em 0;
+    background-color: #28a745
+  }
+  .alert {
+    padding: .5em 0;
+    background-color: #dc3545
+  }
+}
+
 .font-script {
   font-family: 'Great Vibes', cursive;
 }
 
 .player-name-links {
   background-color: $navy-blue;
-  a {
-    // color: #fff;
-  }
   .player-name {
     margin-left: 10px;
   }
@@ -46,7 +60,20 @@ nav {
 
 .barium {
   background-color: $navy-blue;
-  color: #fff;
+  color: $yellow;
+}
+
+.team-player-profile {
+  .right-panel {
+    background-image: image-url('barium_logo_faded.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .card-header {
+    background-color: $navy-blue;
+    color: $yellow;
+  }
 }
 
 .barium-by-deforge-script {
