@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
   def index
     @team = TeamManager::Team.last
-    @players = @team.players
+    if @team
+      @players = @team.players
+    end
     @image_height = 200
   end
 end
