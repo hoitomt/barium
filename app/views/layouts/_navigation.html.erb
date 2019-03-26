@@ -12,7 +12,13 @@
       <span class="float-right font-script barium-by-deforge-script">Barium by Anna DeForge</span>
     </div>
     <div class="col-12 pt-2 text-right">
-      <%= link_to 'Team', team_manager.team_path(@team), class:'px-2 d-none d-md-inline-block' %>
+      <% if @team %>
+        <%= link_to 'Team', team_manager.team_path(@team), class:'px-2 d-none d-md-inline-block' %>
+      <% else %>
+        <% if user_signed_in? %>
+          <%= link_to 'Teams', team_manager.teams_path, class:'px-2 d-none d-md-inline-block' %>
+        <% end %>
+      <% end %>
       <% if user_signed_in? %>
         <%= link_to 'Log Out', team_manager.destroy_user_session_path, method: :delete, class:'px-2 d-none d-md-inline-block' %>
       <% else %>
