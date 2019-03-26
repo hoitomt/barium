@@ -6,7 +6,7 @@
   </div>
 
   <div class="row home-page-players justify-content-around m-2">
-    <% @players.all.each do |player| %>
+    <% @players.all.order(number: :asc).each do |player| %>
       <div class="col-md-4 p-2 overflow-hidden">
         <div class="bg-light text-center player-panel">
           <div class="p-3">
