@@ -12,7 +12,6 @@ body {
 }
 
 nav {
-  border-bottom: 1px $gray solid;
   a {
     color: $yellow;
     &:hover {
@@ -48,11 +47,7 @@ footer {
 }
 
 .player-name-links {
-  border-top: 1px $gray solid;
   background-color: $navy-blue;
-  .player-name {
-    margin-left: 10px;
-  }
   .btn-barium {
     color: $yellow;
     background-color: $navy-blue;
@@ -64,6 +59,25 @@ footer {
     }
   }
 }
+
+.home-page-image {
+  border-top: 1px $gray solid;
+  border-bottom: 1px $gray solid;
+}
+
+.home-page-players {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    display:block;
+    margin:auto;
+  }
+
+  .player-panel {
+    height: 385px;
+  }
+}
+
 
 .barium {
   background-color: $navy-blue;
@@ -99,8 +113,4 @@ footer {
   background-image: image-url('barium_bg.png');
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.home-page-image {
-  box-shadow: 0 0 60px 30px $gray;
 }
