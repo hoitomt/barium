@@ -29,4 +29,3 @@
 config/database.yml
 
 vendor/ruby
-/bin
