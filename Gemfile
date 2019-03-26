@@ -17,7 +17,8 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'dotenv-rails'
 
-gem 'team_manager', path: '../../team_manager'
+# gem 'team_manager', path: '../../team_manager'
+gem 'team_manager', git: 'https://github.com/hoitomt/team_manager'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
