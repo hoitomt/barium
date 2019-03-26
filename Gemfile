@@ -20,6 +20,10 @@ gem 'dotenv-rails'
 # gem 'team_manager', path: '../../team_manager'
 gem 'team_manager', git: 'https://github.com/hoitomt/team_manager'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
