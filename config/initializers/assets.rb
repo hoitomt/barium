@@ -11,4 +11,4 @@ Rails.application.config.assets.paths << Rails.root.join("app", "assets", "image
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( team_manager/blank_girl.png )
+Rails.application.config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
