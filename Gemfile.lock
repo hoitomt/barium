@@ -1,5 +1,6 @@
-PATH
-  remote: ../../team_manager
+GIT
+  remote: https://github.com/hoitomt/team_manager
+  revision: 549b7b590665adb53efb460629a45a7f762b35c5
   specs:
     team_manager (0.1.2)
       bootstrap (~> 4.3.1)

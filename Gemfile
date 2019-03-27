@@ -17,8 +17,8 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'dotenv-rails'
 
-gem 'team_manager', path: '../../team_manager'
-# gem 'team_manager', git: 'https://github.com/hoitomt/team_manager'
+# gem 'team_manager', path: '../../team_manager'
+gem 'team_manager', git: 'https://github.com/hoitomt/team_manager'
 
 group :production do
   gem 'rails_12factor'
