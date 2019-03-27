@@ -48,14 +48,14 @@ Rails.application.configure do
   # number of complex assets.
 
   # Development
-  # config.assets.debug = true
-  # config.assets.quiet = true # Suppress logger output for asset requests.
+  config.assets.debug = true
+  config.assets.quiet = true # Suppress logger output for asset requests.
 
   # Test Production
-  config.assets.quiet = false
-  config.assets.debug = false
-  config.assets.compile = false
-  config.assets.digest = true
+  # config.assets.quiet = false
+  # config.assets.debug = false
+  # config.assets.compile = false
+  # config.assets.digest = true
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
