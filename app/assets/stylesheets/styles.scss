@@ -5,6 +5,8 @@ $yellow: #ffdb2f;
 $gray: #cccccc;
 $light-gray: #e4e4e4;
 $slate-gray: #63768a;
+$nav-height-home-lg: 200px;
+$nav-height: 70px;
 
 body {
   font-family: 'Lato', sans-serif;
@@ -18,6 +20,22 @@ nav {
       color: $gray;
     }
   }
+}
+
+@media (min-width: 767.98px) {
+  .nav-height-home {
+    height: $nav-height-home-lg;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .nav-height-home {
+    height: $nav-height;
+  }
+}
+
+.nav-height {
+  height: $nav-height;
 }
 
 footer {

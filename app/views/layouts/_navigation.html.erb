@@ -1,30 +1,36 @@
 <% @team ||= TeamManager::Team.last %>
-<% @image_height ||= 60 %>
+<% @home_page ||= false %>
+<% nav_height_class = @home_page ? 'nav-height-home' : 'nav-height' %>
 
 <nav class="site-header barium py-1">
-  <div class="float-left p-2">
+  <div class="float-left p-2 <%= nav_height_class %>">
     <%= link_to main_app.root_path do %>
-      <%= image_tag 'barium_logo_transparent_bg.png', height: @image_height %>
+      <%= image_tag 'barium_logo_transparent_bg.png', height: '100%' %>
     <% end %>
   </div>
-  <div class="float-right">
-    <div class="col-12 font-script d-none d-md-inline-block font-right" style="height: <%= (@image_height - 15) %>px;">
-      <span class="float-right font-script barium-by-deforge-script">Barium by Anna DeForge</span>
+  <div class="float-right <%= nav_height_class %>" style="position: relative; width: 300px">
+    <div class="col-12 font-script text-right" >
+      <span class="float-right font-script barium-by-deforge-script d-none d-md-inline-block">Barium by Anna DeForge</span>
+      <div class="clearfix"></div>
     </div>
-    <div class="col-12 pt-2 text-right">
+    <div class="col-12 pt-2 text-right" style="position: absolute; bottom: 0px;">
       <% if @team && @team.id %>
-        <%= link_to 'Team', team_manager.team_path(@team), class:'px-2 d-none d-md-inline-block' %>
+        <%= link_to 'Team', team_manager.team_path(@team), class:'px-2 d-md-inline-block' %>
       <% else %>
         <% if user_signed_in? %>
-          <%= link_to 'Teams', team_manager.teams_path, class:'px-2 d-none d-md-inline-block' %>
+          <%= link_to 'Teams', team_manager.teams_path, class:'px-2 d-md-inline-block' %>
         <% end %>
       <% end %>
       <% if user_signed_in? %>
-        <%= link_to 'Log Out', team_manager.destroy_user_session_path, method: :delete, class:'px-2 d-none d-md-inline-block' %>
+        <%= link_to 'Log Out', team_manager.destroy_user_session_path, method: :delete, class:'px-2 d-md-inline-block' %>
       <% else %>
-        <%= link_to 'Sign In', team_manager.new_user_session_path, class:'px-2 d-none d-md-inline-block' %>
+        <%= link_to 'Sign In', team_manager.new_user_session_path, class:'px-2 d-md-inline-block' %>
       <% end %>
+
+      <div class="clearfix"></div>
     </div>
+
+      <div class="clearfix"></div>
   </div>
   <div class="clearfix"></div>
 </nav>
