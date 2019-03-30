@@ -12,6 +12,7 @@
           <div class="bg-light text-center player-panel">
             <div class="p-3">
               <h4 class="display-5"><%= player.number %> - <%= player.name %></h4>
+              <p class="mb-0 font-italic"><%= player.quote %></p>
             </div>
             <div class="p-3 player-photo-container">
               <%= link_to team_manager.team_player_path(player.team, player) do %>
