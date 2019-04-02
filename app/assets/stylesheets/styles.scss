@@ -83,6 +83,10 @@ footer {
   border-bottom: 1px $gray solid;
 }
 
+.twitter-timeline {
+  height: 300px;
+}
+
 .home-page-players {
   img {
     max-width: 100%;
@@ -91,7 +95,7 @@ footer {
     margin:auto;
   }
   .player-photo-container {
-    height: 385px;
+    height: 285px;
   }
 }
 
