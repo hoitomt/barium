@@ -16,6 +16,7 @@
     <div class="col-12 pt-2 text-right" style="position: absolute; bottom: 0px;">
       <% if @team && @team.id %>
         <%= link_to 'Team', team_manager.team_path(@team), class:'px-2 d-md-inline-block' %>
+        <%= link_to 'Schedule', team_manager.team_schedule_path(@team), class:'px-2 d-md-inline-block' %>
       <% else %>
         <% if user_signed_in? %>
           <%= link_to 'Teams', team_manager.teams_path, class:'px-2 d-md-inline-block' %>
