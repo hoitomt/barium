@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/hoitomt/team_manager
-  revision: dd7d3baa47d72d9d392c3dfe7b2ed763550d65a8
+  revision: 0a82d9c7a6bdc9117af80328a058b186182aa301
   specs:
-    team_manager (0.1.9)
+    team_manager (0.1.10)
       bootstrap (~> 4.3.1)
       carrierwave (~> 1.0)
       devise
