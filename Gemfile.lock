@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/hoitomt/team_manager
-  revision: 9f7164677d6327b77d774948779fb6f8e9bb71e7
+  revision: 7c709daca8a3e523d77bcbf5121d3cf5b925f4eb
   specs:
-    team_manager (0.1.7)
+    team_manager (0.1.8)
       bootstrap (~> 4.3.1)
       carrierwave (~> 1.0)
       devise
@@ -166,7 +166,7 @@ GEM
     popper_js (1.14.5)
     public_suffix (3.0.3)
     puma (3.12.1)
-    rack (2.0.6)
+    rack (2.0.7)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.3)
@@ -202,7 +202,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    regexp_parser (1.3.0)
+    regexp_parser (1.4.0)
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
@@ -253,7 +253,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
-    validate_url (1.0.6)
+    validate_url (1.0.8)
       activemodel (>= 3.0.0)
       public_suffix
     warden (1.2.8)
