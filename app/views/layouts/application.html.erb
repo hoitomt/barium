@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/notification' %>
     <%= yield :no_container %>
@@ -19,9 +20,7 @@
     <div class="container">
       <%= yield %>
     </div>
+    <%= render 'layouts/footer' %>
 
-    <footer class="py-3 mt-3 text-center">
-      <p>Copyright <%= DateTime.now.year %> - <%= link_to 'Hoitomt Software', 'http://www.hoitomtsoftware.com' %></p>
-    </footer>
   </body>
 </html>

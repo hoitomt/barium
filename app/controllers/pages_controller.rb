@@ -6,4 +6,16 @@ class PagesController < ApplicationController
       @players = @team.players
     end
   end
+
+  def our_story
+
+  end
+
+  def contact_us
+
+  end
+
+  def sponsors
+
+  end
 end

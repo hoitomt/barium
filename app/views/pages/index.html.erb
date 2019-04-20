@@ -5,30 +5,14 @@
     </div>
   </div>
 
+  <%= render partial: 'player_links_home_page', locals: { players: @players } %>
+
   <% if @players %>
     <div class="row home-page-players justify-content-around m-2">
       <div class="col-md-9">
         <div class="row">
-          <% @players.all.order(number: :asc).each do |player| %>
-            <div class="col-md-4 p-2">
-              <div class="bg-light text-center player-panel">
-                <div class="p-3">
-                  <h5 class="display-5"><%= player.number %> - <%= player.name %></h5>
-                  <p class="mb-0 font-italic small"><%= player.quote %></p>
-                </div>
-                <div class="p-3 player-photo-container">
-                  <%= link_to team_manager.team_player_path(player.team, player) do %>
-                    <% photo = player.player_photos.where(home_page: true).order(created_at: :asc).last %>
-                    <% if photo.present? %>
-                      <%= image_tag photo.image_url %>
-                    <% else %>
-                      <%= image_tag 'team_manager/blank_girl.png' %>
-                    <% end %>
-                  <% end %>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
+          <% @players.each do |player| %>
+            <%= render partial: 'player_panel', locals: { player: player } %>
           <% end %>
         </div>
 

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#index'
 
-  get 'about', to: 'pages#about', as: 'about'
-  get 'contact', to: 'pages#contact', as: 'contact'
+  get 'our_story', to: 'pages#our_story', as: 'our_story'
+  get 'contact_us', to: 'pages#contact_us', as: 'contact_us'
+  get 'sponsors', to: 'pages#sponsors', as: 'sponsors'
 end

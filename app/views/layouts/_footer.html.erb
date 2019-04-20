@@ -1,0 +1,18 @@
+<footer class="py-3 mt-3 text-center">
+  <p>Copyright <%= DateTime.now.year %> - <%= link_to 'Hoitomt Software', 'http://www.hoitomtsoftware.com' %></p>
+  <div class="col-12 pt-2 text-right">
+    <% if @team && @team.id %>
+      <%= link_to 'Team', team_manager.team_path(@team), class:'px-2 d-md-inline-block' %>
+      <%= link_to 'Schedule', team_manager.team_events_path(@team), class:'px-2 d-md-inline-block' %>
+    <% else %>
+      <% if user_signed_in? %>
+        <%= link_to 'Teams', team_manager.teams_path, class:'px-2 d-md-inline-block' %>
+      <% end %>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to 'Log Out', team_manager.destroy_user_session_path, method: :delete, class:'px-2 d-md-inline-block' %>
+    <% else %>
+      <%= link_to 'Sign In', team_manager.new_user_session_path, class:'px-2 d-md-inline-block' %>
+    <% end %>
+  </div>
+</footer>

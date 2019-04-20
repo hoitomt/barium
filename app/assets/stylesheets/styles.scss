@@ -13,11 +13,28 @@ body {
   // font-family: 'Raleway', sans-serif;
 }
 
-nav {
+header {
+  background-color: $navy-blue;
+  color: $yellow;
+  // border-bottom: 1px $gray solid;
   a {
     color: $yellow;
     &:hover {
       color: $gray;
+    }
+  }
+}
+
+nav {
+  color: $yellow;
+  background-color: $navy-blue;
+  border-bottom: 1px $gray solid;
+  a {
+    font-size: 18px;
+    color: $yellow;
+    &:hover {
+      color: $gray;
+      text-decoration: none;
     }
   }
 }
@@ -66,20 +83,29 @@ footer {
 
 .player-name-links {
   background-color: $navy-blue;
+  border-bottom: 1px $gray solid;
+  padding: 10px 50px 10px 50px;
   .btn-barium {
-    color: $yellow;
-    background-color: $navy-blue;
-    border-color: $yellow;
+    color: $navy-blue;
+    background-color: $yellow;
+    margin-top: 10px;
     &:hover {
       color: $navy-blue;
       background-color: $yellow;
       border-color: $gray;
     }
   }
+  a.link-barium {
+    padding: 3px;
+    color: $yellow;
+    &:hover {
+      color: $gray;
+      text-decoration: none;
+    }
+  }
 }
 
 .home-page-image {
-  border-top: 1px $gray solid;
   border-bottom: 1px $gray solid;
 }
 
@@ -95,14 +121,27 @@ footer {
     margin:auto;
   }
   .player-photo-container {
-    height: 285px;
+    img {
+      border: 5px $yellow solid;
+      border-radius: 10px;
+    }
   }
 }
 
-
-.barium {
-  background-color: $navy-blue;
-  color: $yellow;
+.player-panel {
+  .info {
+    h5 {
+      color: $navy-blue;
+      font-weight: 900;
+    }
+    a {
+      color: $navy-blue;
+    }
+    p {
+      color: $slate-gray;
+      margin: 0px;
+    }
+  }
 }
 
 .team-player-profile {
@@ -134,4 +173,9 @@ footer {
   background-image: image-url('barium_bg.png');
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.our-story-image {
+  display: inline-block;
+  float: left;
 }

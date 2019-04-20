@@ -1,37 +1,14 @@
 <% @team ||= TeamManager::Team.last %>
-<% @home_page ||= false %>
-<% nav_height_class = @home_page ? 'nav-height-home' : 'nav-height' %>
-
-<nav class="site-header barium py-1">
-  <div class="float-left p-2 <%= nav_height_class %>">
-    <%= link_to main_app.root_path do %>
-      <%= image_tag 'barium_logo_transparent_bg.png', height: '100%' %>
-    <% end %>
+<nav class="py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <%= link_to 'Home', main_app.root_path, class: "py-2 d-none d-md-inline-block" %>
+    <%= link_to 'Our Story', main_app.our_story_path, class: "py-2 d-none d-md-inline-block" %>
+    <a class="py-2 d-none d-md-inline-block" href="http://annadeforge.com/" target="_blank">Anna Deforge</a>
+    <%= link_to 'Tournaments', team_manager.team_events_path(@team), class: "py-2 d-none d-md-inline-block" %>
+    <%= link_to 'Contact Us', main_app.contact_us_path, class: "py-2 d-none d-md-inline-block" %>
+    <%= link_to 'Sponsors', main_app.sponsors_path, class: "py-2 d-none d-md-inline-block" %>
   </div>
-  <div class="float-right <%= nav_height_class %>" style="position: relative; width: 250px">
-    <div class="col-12 font-script text-right" >
-      <span class="float-right font-script barium-by-deforge-script d-none d-md-inline-block">Barium by Anna DeForge</span>
-      <div class="clearfix"></div>
-    </div>
-    <div class="col-12 pt-2 text-right" style="position: absolute; bottom: 0px;">
-      <% if @team && @team.id %>
-        <%= link_to 'Team', team_manager.team_path(@team), class:'px-2 d-md-inline-block' %>
-        <%= link_to 'Schedule', team_manager.team_events_path(@team), class:'px-2 d-md-inline-block' %>
-      <% else %>
-        <% if user_signed_in? %>
-          <%= link_to 'Teams', team_manager.teams_path, class:'px-2 d-md-inline-block' %>
-        <% end %>
-      <% end %>
-      <% if user_signed_in? %>
-        <%= link_to 'Log Out', team_manager.destroy_user_session_path, method: :delete, class:'px-2 d-md-inline-block' %>
-      <% else %>
-        <%= link_to 'Sign In', team_manager.new_user_session_path, class:'px-2 d-md-inline-block' %>
-      <% end %>
-
-      <div class="clearfix"></div>
-    </div>
-
-      <div class="clearfix"></div>
-  </div>
-  <div class="clearfix"></div>
 </nav>
+
+
+

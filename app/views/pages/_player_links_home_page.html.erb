@@ -1,0 +1,41 @@
+<div class="player-name-links">
+  <%
+    natalie_jens = @players.find{ |p| p.name == 'Natalie Jens' }
+    jada_donaldson = @players.find{ |p| p.name == 'Jada Donaldson' }
+    paige_banks = @players.find{ |p| p.name == 'Paige Banks' }
+    paige_yagodinski = @players.find{ |p| p.name == 'Paige Yagodinski' }
+    anna_lutz = @players.find{ |p| p.name == 'Anna Lutz' }
+    kate_hosking = @players.find{ |p| p.name == 'Kate Hosking' }
+    ramsey_mcgrew = @players.find{ |p| p.name == 'Ramsey McGrew' }
+    laura_nickel = @players.find{ |p| p.name == 'Laura Nickel' }
+    kiersten_mcnulty = @players.find{ |p| p.name == 'Kiersten McNulty' }
+  %>
+  <div class="row no-gutters">
+    <div class="col-md" align="center">
+      <%= link_to "##{natalie_jens.number} #{natalie_jens.name.split(' ').last}", team_manager.team_player_path(natalie_jens.team, natalie_jens), class: 'link-barium' %>
+    </div>
+    <div class="col-md" align="center">
+      <%= link_to "##{paige_banks.number} #{paige_banks.name.split(' ').last}", team_manager.team_player_path(paige_banks.team, paige_banks), class: 'link-barium' %>
+    </div>
+    <div class="col-md" align="center">
+      <%= link_to "##{anna_lutz.number} #{anna_lutz.name.split(' ').last}", team_manager.team_player_path(anna_lutz.team, anna_lutz), class: 'link-barium' %>
+    </div>
+    <div class="col-md" align="center">
+      <%= link_to "##{ramsey_mcgrew.number} #{ramsey_mcgrew.name.split(' ').last}", team_manager.team_player_path(ramsey_mcgrew.team, ramsey_mcgrew), class: 'link-barium' %>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-md" align="center">
+      <%= link_to "##{jada_donaldson.number} #{jada_donaldson.name.split(' ').last}", team_manager.team_player_path(jada_donaldson.team, jada_donaldson), class: 'link-barium' %>
+    </div>
+    <div class="col-md" align="center">
+      <%= link_to "##{paige_yagodinski.number} #{paige_yagodinski.name.split(' ').last}", team_manager.team_player_path(paige_yagodinski.team, paige_yagodinski), class: 'link-barium' %>
+    </div>
+    <div class="col-md" align="center">
+      <%= link_to "##{kate_hosking.number} #{kate_hosking.name.split(' ').last}", team_manager.team_player_path(kate_hosking.team, kate_hosking), class: 'link-barium' %>
+    </div>
+    <div class="col-md" align="center">
+      <%= link_to "##{laura_nickel.number} #{laura_nickel.name.split(' ').last}", team_manager.team_player_path(laura_nickel.team, laura_nickel), class: 'link-barium' %>
+    </div>
+  </div>
+</div>
