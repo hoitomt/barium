@@ -11,7 +11,7 @@
     <%= javascript_include_tag "team_manager/application" %>
   </head>
 
-  <body>
+  <body class="<%= current_page?(controller: 'pages', action: 'index') ? 'barium' : '' %>">
     <%= render 'layouts/header' %>
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/notification' %>

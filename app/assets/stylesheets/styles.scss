@@ -39,6 +39,11 @@ nav {
   }
 }
 
+.barium {
+  background-color: $navy-blue;
+  color: $yellow;
+}
+
 @media (min-width: 767.98px) {
   .nav-height-home {
     height: $nav-height-home-lg;
