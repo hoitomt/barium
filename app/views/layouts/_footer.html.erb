@@ -1,9 +1,8 @@
-<footer class="py-3 mt-3 text-center">
-  <p>Copyright <%= DateTime.now.year %> - <%= link_to 'Hoitomt Software', 'http://www.hoitomtsoftware.com' %></p>
-  <div class="col-12 pt-2 text-right">
+<footer class="footer py-3 mt-3 text-center">
+  <p class="mb-0">Copyright <%= DateTime.now.year %> - <%= link_to 'Hoitomt Software', 'http://www.hoitomtsoftware.com' %></p>
+  <div class="col-12 text-right mt-0">
     <% if @team && @team.id %>
       <%= link_to 'Team', team_manager.team_path(@team), class:'px-2 d-md-inline-block' %>
-      <%= link_to 'Schedule', team_manager.team_events_path(@team), class:'px-2 d-md-inline-block' %>
     <% else %>
       <% if user_signed_in? %>
         <%= link_to 'Teams', team_manager.teams_path, class:'px-2 d-md-inline-block' %>
