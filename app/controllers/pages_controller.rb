@@ -3,7 +3,7 @@ class PagesController < ApplicationController
     @home_page = true
     @team = TeamManager::Team.last
     if @team
-      @players = @team.players
+      @players = @team.players.order(:number)
     end
   end
 
