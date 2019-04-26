@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/hoitomt/team_manager
-  revision: 448af675adc678102f8fcc1e1d6458b8fb2ea215
+  revision: ee0a7d9d301f4785ce32cd9edf4de022499fc1bb
   specs:
     team_manager (0.1.14)
       bootstrap (~> 4.3.1)
@@ -107,7 +107,7 @@ GEM
     excon (0.64.0)
     execjs (2.7.0)
     ffi (1.10.0)
-    fog-aws (3.4.0)
+    fog-aws (3.5.0)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
       fog-xml (~> 0.1)
