@@ -15,7 +15,6 @@
       <h5 class="display-5"><%= player.name %> #<%= player.number %></h5>
       <p><%= player.height %> <%= player.position %></p>
       <p><%= player.year %> | <%= player.school %></p>
-      <p class="mb-0 font-italic small"><%= player.quote %></p>
       <%= link_to 'Read More', team_manager.team_player_path(player.team, player) %>
     </div>
   </div>
