@@ -1,14 +1,15 @@
 <% @team ||= TeamManager::Team.last %>
-<nav class="py-1">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <%= link_to 'Home', main_app.root_path, class: "py-2 d-none d-md-inline-block" %>
-    <%= link_to 'Our Story', main_app.our_story_path, class: "py-2 d-none d-md-inline-block" %>
-    <a class="py-2 d-none d-md-inline-block" href="http://annadeforge.com/" target="_blank">Anna Deforge</a>
-    <%= link_to 'Tournaments', team_manager.team_events_path(@team), class: "py-2 d-none d-md-inline-block" %>
-    <%= link_to 'Contact Us', main_app.contact_us_path, class: "py-2 d-none d-md-inline-block" %>
-    <%= link_to 'Sponsors', main_app.sponsors_path, class: "py-2 d-none d-md-inline-block" %>
+
+<nav class="py-1 navbar navbar-expand-md">
+  <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <%= link_to 'Home', main_app.root_path, class: "py-2 d-md-inline-block" %>
+      <%= link_to 'Our Story', main_app.our_story_path, class: "py-2 d-md-inline-block" %>
+      <a class="py-2 d-md-inline-block" href="http://annadeforge.com/" target="_blank">Anna Deforge</a>
+      <%= link_to 'Tournaments', team_manager.team_events_path(@team), class: "py-2 d-md-inline-block" %>
+      <%= link_to 'Contact Us', main_app.contact_us_path, class: "py-2 d-md-inline-block" %>
+      <%= link_to 'Sponsors', main_app.sponsors_path, class: "py-2 d-md-inline-block" %>
+    </div>
+    <div class="clearfix"></div>
   </div>
 </nav>
-
-
-
