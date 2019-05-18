@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   end
 
   def our_story
-
+    @site_photos = TeamManager::SitePhoto.where(about_page: true)
   end
 
   def contact_us

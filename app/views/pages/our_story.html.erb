@@ -1,21 +1,16 @@
 <h1>Our Story</h1>
 
-<div class="row">
-  <%= image_tag 'our_story/team_meal.jpg', class: 'our-story-image' %>
-  <%= image_tag 'our_story/team_hs.jpg', class: 'our-story-image' %>
-  <%= image_tag 'our_story/bd_trophy.jpg', class: 'our-story-image' %>
+<div class="grid">
+  <% @site_photos.each do |site_photo| %>
+    <div class="grid-item">
+      <%= image_tag site_photo.image.url, class: 'our-story-image' %>
+    </div>
+  <% end %>
+  <div class="clearfix"></div>
 </div>
-<div class="row">
-  <%= image_tag 'our_story/marshall_trophy.jpg', class: 'our-story-image' %>
-  <%= image_tag 'our_story/team_above.jpg', class: 'our-story-image' %>
-  <%= image_tag 'our_story/team_ipad.jpg', class: 'our-story-image' %>
+
+<div class="row my-3">
+  <% if user_signed_in? %>
+    <%= link_to 'Manage Photos', team_manager.site_site_photos_path, class: 'btn btn-primary' %>
+  <% end %>
 </div>
-<div class="row">
-  <%= image_tag 'our_story/team_living_room.jpg', class: 'our-story-image' %>
-  <%= image_tag 'our_story/team_gym.jpg', class: 'our-story-image' %>
-  <%= image_tag 'our_story/players_mom.jpg', class: 'our-story-image' %>
-</div>
-<div class="row">
-  <%= image_tag 'our_story/team_niagara_logo.jpg', class: 'our-story-image' %>
-</div>
-<div class="clearfix"></div>
