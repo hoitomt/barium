@@ -9,6 +9,7 @@
       <% end %>
     <% end %>
     <% if user_signed_in? %>
+      <%= link_to 'Players', team_manager.players_path, class:'px-2 d-md-inline-block' %>
       <%= link_to 'Log Out', team_manager.destroy_user_session_path, method: :delete, class:'px-2 d-md-inline-block' %>
     <% else %>
       <%= link_to 'Sign In', team_manager.new_user_session_path, class:'px-2 d-md-inline-block' %>
